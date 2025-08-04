@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik khadarvali</title>
+    <title>Hero Section</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title>About Me - Popup Modal</title>
+
+   <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Skills Section</title>
+
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title>Projects Section</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title>Certificates Section</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title>Contact Section</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Khadar</a>
+
+        <!-- Menu Icon (Toggler) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        More
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#project">Projects</a></li>
+                        <li><a class="dropdown-item" href="#certificate">Certificates</a></li>
+                        <li><a class="dropdown-item" href="#contact">Get in Touch</a></li>
+                        <li><a class="dropdown-item" href="images/khadarvali.pdf" download>Download CV</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Smooth Scrolling -->
+<script>
+    document.querySelectorAll('.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if (this.getAttribute('href').startsWith("#")) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70, 
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
+    // Auto-close navbar on mobile after clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (document.querySelector('.navbar-collapse').classList.contains('show')) {
+                new bootstrap.Collapse(document.querySelector('.navbar-collapse')).hide();
+            }
+        });
+    });
+
+    // Highlight active nav link on scroll
+    window.addEventListener('scroll', () => {
+        let scrollPos = window.scrollY + 80;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            let section = document.querySelector(link.getAttribute('href'));
+            if (section && section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+                document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+
+<!-- Smooth Scrolling JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a.nav-link, .dropdown-item').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    });
+    </script>
+
+    <!-- Hero Section -->
+     <section id="home">
+    <section class="hero-section">
+        <div class="container d-flex align-items-center">
+
+            <!-- Animated Profile Image -->
+            <div class="hero-image">
+                <img src="images\profile2 (2).jpg" alt="Profile Image">
+            </div>
+
+            <!-- Hero Text -->
+            <div class="hero-text">
+                <h1 class="animate__animated animate__fadeInLeft">Hi, I am Shaik KhadarVali</h1>
+                <h2 class="animate__animated animate__fadeInRight">Aspiring Software Developer | Web Enthusiast</h2>
+                
+                <!-- Contact Me Button -->
+                <a href="#contact" class="btn-custom">Contact Me</a>
+                
+                <!-- Download CV Button -->
+                <a href="SHAIKKHADARVALI.pdf" class="btn-download" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+
+        </div>
+    </section>
+</section>
+
+
+ <!-- About Me Section -->
+<section id="about" class="about-section">
+    <div class="text-center mt-5">
+        <button class="btn btn-primary" onclick="showAboutModal()">About Me</button>
+    </div>
+
+    <!-- About Me Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content animate__animated animate__fadeInUp">
+
+                <div class="modal-body">
+                    <div class="row align-items-center">
+
+                        <!-- Left Side: Image -->
+                        <div class="col-md-5 text-center">
+                            <img src="images\profile2.jpg" alt="Profile Image" class="img-fluid rounded-circle">
+                        </div>
+
+                        <!-- Right Side: About Me Content -->
+                        <div class="col-md-7">
+                            <h2 class="mb-3">Hi, I'm S.Khadarvali! 👋</h2>
+                            <p class="about-text">
+                                I'm a <strong>B.Tech Computer Science</strong> student passionate about technology, coding, and innovation. 
+                                My journey in programming started with web development, and I have gained expertise in:
+                            </p>
+
+                            <!-- Skills List -->
+                            <ul class="about-list">
+                                <li><strong>Web Development:</strong> HTML, CSS,</li>
+                                <li><strong>Programming Languages:</strong> Python, </li>
+                                <li><strong>Databases:</strong> MySQL, MongoDB</li>
+                                <li><strong>Interests:</strong> AI, Flutter,Django,RPA Technology </li>
+                            </ul>
+
+                            <p class="about-text">
+                                Apart from coding, I love <strong>exploring new technologies, mentoring peers,</strong> and working on exciting projects! 🚀
+                            </p>
+
+                            <!-- Contact Button -->
+                            <a href="#contact" class="btn btn-success mt-3">Contact Me</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Auto-Hide Modal -->
+<script>
+    function showAboutModal() {
+        let aboutModal = new bootstrap.Modal(document.getElementById('aboutModal'));
+        aboutModal.show();
+
+        // Hide modal after 4 seconds (4000ms)
+        setTimeout(() => {
+            aboutModal.hide();
+        }, 10000);
+    }
+</script>
+
+
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <h2 class="text-center">My Skills</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <!-- Skill 1: HTML & CSS -->
+            <div class="col-md-4 mb-4">
+                <div class="skill-card text-center" onclick="showModal('htmlModal')">
+                    <img src="images/htmllogo.jpg" alt="HTML & CSS" class="img-fluid">
+                    <h4>HTML & CSS</h4>
+                </div>
+            </div>
+
+            <!-- Skill 2: C language -->
+            <div class="col-md-4 mb-4">
+                <div class="skill-card text-center" onclick="showModal('jsModal')">
+                    <img src="images\c.png" alt="C language" class="img-fluid">
+                    <h4>C Language</h4>
+                </div>
+            </div>
+
+            <!-- Skill 3: Python -->
+            <div class="col-md-4 mb-4">
+                <div class="skill-card text-center" onclick="showModal('pythonModal')">
+                    <img src="images/python logo.jpg" alt="Python" class="img-fluid">
+                    <h4>Python</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Skill Modals -->
+<!-- HTML & CSS Modal -->
+<div class="modal fade" id="htmlModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body">
+                <h3>HTML & CSS</h3>
+                <p>HTML & CSS are the backbone of web development. I have expertise in building responsive and modern UI designs using Bootstrap, Flexbox, and Grid.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  C Language Modal -->
+<div class="modal fade" id="jsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body">
+                <h3>C language </h3>
+                <p>C Language is my favorite language  as it is Mother Language for all programming Languages</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Python Modal -->
+<div class="modal fade" id="pythonModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body">
+                <h3>Python</h3>
+                <p>Python is my go-to language for backend development, automation, and data analysis. I have experience working with Django, Flask, and Pandas.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for Auto-Hide Modal -->
+<script>
+    function showModal(modalId) {
+        let modal = new bootstrap.Modal(document.getElementById(modalId));
+        modal.show();
+
+        // Auto-close modal after 2 seconds (2000ms)
+        setTimeout(() => {
+            modal.hide();
+        }, 1000);
+    }
+</script>
+
+ <!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <h2 class="text-center">My Projects</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <!-- Project 1: Chat Application -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card text-center" onclick="showModal('project1Modal')">
+                    <img src="images\ai.jpeg.jpg" alt="Chat Application" class="img-fluid">
+                    <h4>PPT to Video Converter With Ai VoiceOver</h4>
+                </div>
+            </div>
+
+          
+
+            <!-- Project 3: QR Scanner -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card text-center" onclick="showModal('project3Modal')">
+                    <img src="images/scanner.jpg" alt="QR Scanner" class="img-fluid">
+                    <h4>QR Scanner</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Project Modals -->
+<!-- Chat Application Modal -->
+<div class="modal fade" id="project1Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body text-center">
+                <h3>Chat Application</h3>
+                <img src="images/chat application.png" alt="Chat Application" class="modal-img">
+                <p>A real-time chat application using WebSocket and Node.js. It supports multiple users, group chats, and private messaging.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Doctor Appointment System Modal -->
+<div class="modal fade" id="project2Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body text-center">
+                <h3>Doctor Appointment System</h3>
+                <img src="images/doctor appointment.jpg" alt="Doctor Appointment System" class="modal-img">
+                <p>An online booking system for scheduling doctor appointments. Built with Django and a MySQL database.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QR Scanner Modal -->
+<div class="modal fade" id="project3Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body text-center">
+                <h3>QR Scanner</h3>
+                <img src="images/scanner.jpg" alt="QR Scanner" class="modal-img">
+                <p>A QR code scanner using Python and OpenCV that can read and decode QR codes instantly.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for Auto-Hide Modal -->
+<script>
+    function showModal(modalId) {
+        let modal = new bootstrap.Modal(document.getElementById(modalId));
+        modal.show();
+
+        // Auto-close modal after 2 seconds (2000ms)
+        setTimeout(() => {
+            modal.hide();
+        }, 1000);
+    }
+</script>
+
+
+<!-- Certificates Section -->
+<section id="certificates" class="certificates-section">
+    <h2 class="text-center">My Certifications</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <!-- Certificate 1: Merit - RGM College -->
+            <div class="col-md-4 mb-4">
+                <div class="certificate-card text-center" onclick="showModal('cert1Modal')">
+                    <img src="images/a3.jpg" alt="Certificate of Merit" class="img-fluid">
+                    <h4>Certificate of Merit - RGM College</h4>
+                </div>
+            </div>
+
+            <!-- Certificate 2: Completion - Code Soft -->
+            <div class="col-md-4 mb-4">
+                <div class="certificate-card text-center" onclick="showModal('cert2Modal')">
+                    <img src="images/a4.jpg" alt="Code Soft Completion" class="img-fluid">
+                    <h4>Completion - Code Soft</h4>
+                </div>
+            </div>
+
+            <!-- Certificate 3: ChatGPT & AI Workshop -->
+            <div class="col-md-4 mb-4">
+                <div class="certificate-card text-center" onclick="showModal('cert3Modal')">
+                    <img src="images/a5.jpg" alt="AI Workshop" class="img-fluid">
+                    <h4>ChatGPT & AI Tools Workshop</h4>
+                </div>
+            </div>
+
+            <!-- Certificate 4: Completion - Skill India -->
+            <div class="col-md-4 mb-4">
+                <div class="certificate-card text-center" onclick="showModal('cert4Modal')">
+                    <img src="images\a1.jpg" alt="Skill India Completion" class="img-fluid">
+                    <h4>Completion - Skill India</h4>
+                </div>
+            </div>
+
+            <!-- Certificate 5: Google Cloud & AI -->
+            <div class="col-md-4 mb-4">
+                <div class="certificate-card text-center" onclick="showModal('cert5Modal')">
+                    <img src="images/a2.jpg" alt="Google Cloud & AI" class="img-fluid">
+                    <h4>Google Cloud & AI - GDSC SVR</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Certificate Modals -->
+<!-- Certificate 1 Modal -->
+<div class="modal fade" id="cert1Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body text-center">
+                <h3>Certificate of Merit - RGM College</h3>
+                <img src="images/a3.jpg" alt="Certificate of Merit" class="modal-img">
+                <p>Awarded for excellence in academic performance at RGM College of Engineering & Technology.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 2 Modal -->
+<div class="modal fade" id="cert2Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body text-center">
+                <h3>Completion - Code Soft</h3>
+                <img src="images/a4.jpg" alt="Code Soft Completion" class="modal-img">
+                <p>Completed an internship at Code Soft, gaining experience in software development.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 3 Modal -->
+<div class="modal fade" id="cert3Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body text-center">
+                <h3>ChatGPT & AI Tools Workshop</h3>
+                <img src="images/a5.jpg" alt="AI Workshop" class="modal-img">
+                <p>Attended a workshop on AI tools and ChatGPT applications for development.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 4 Modal -->
+<div class="modal fade" id="cert4Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body text-center">
+                <h3>Completion - Skill India</h3>
+                <img src="images/a6.jpg" alt="Skill India Completion" class="modal-img">
+                <p>Successfully completed a training program under the Skill India initiative.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 5 Modal -->
+<div class="modal fade" id="cert5Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="modal-body text-center">
+                <h3>Google Cloud & AI - GDSC SVR</h3>
+                <img src="images/a2.jpg" alt="Google Cloud & AI" class="modal-img">
+                <p>Completed Google Cloud Computing Foundations & Generative AI training.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for Auto-Hide Modal -->
+<script>
+    function showModal(modalId) {
+        let modal = new bootstrap.Modal(document.getElementById(modalId));
+        modal.show();
+
+        // Auto-close modal after 2 seconds (2000ms)
+        setTimeout(() => {
+            modal.hide();
+        }, 1000);
+    }
+</script>
+
+    <!-- Bootstrap JS (Place before closing body tag) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Contact Section -->
+ <section id="contact">
+<section class="contact-section">
+    <h2 class="animate__animated animate__fadeInDown">Get in Touch</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-md-6">
+                <div class="contact-box animate__animated animate__zoomIn">
+                    
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/khadar_vali_official?igsh=MWRucnV3bXFtdDdzOQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/khadarvali22994?t=RVnrVS2unU8vieH7NiEjww&s=08" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="22am1a3149@svrec.ac.in"><i class="fas fa-envelope"></i></a>
+                        <a href="https://youtube.com/@starboytech-123?si=FZ08yiMJc9blda1Q" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/khadar-vali-shaik-a2aa30270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <br>
+
+                    <!-- Contact Form -->
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea rows="4" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</section>
+</body>
+</html>
